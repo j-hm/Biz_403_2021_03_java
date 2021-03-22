@@ -30,12 +30,42 @@ public class Controller_06 {
 	public static void main(String[] args) {
 		
 		/*
-		 * 프로젝트에서 JDK의 도구를 사용하는 방법~
+		 * 프로젝트에서 JDK의 도구(클래스)를 사용하는 방법~
 		 * 변수를 선언하고 초기화하는 것과 유사
+		 * 
+		 * int 키워드는 정수형 변수를 선언
+		 * Integer 키워드는 정수형 변수를 선언
+		 * 		=>실체는 키워드가 아니고 class이다
+		 * 
+		 * 키워드는 java가 처음 탄생될 때부터 만들어진 명령어
+		 * 클래스는 키워드처럼 사용되지만
+		 * 자바 탄생이후에 필요에 따라 추가, 확장된 명령
 		 */
 		Random rnd = null; // 선언
 		rnd = new Random(); // 초기화
 		
+		Random rnd1 = new Random();
+		
+		int num1 = 0;
+		Integer num2 = 0;
+		Integer num3 = new Integer(0);
+		
+		String str1 = "";
+		str1 = "박성화"
+		String str2 = null;
+		String str3 = new String();
+		/*
+		 * wrapper 클래스
+		 *  : 클래스이지만 변수선언처럼 사용할 수 있는 도구들
+		 * 
+		 * integer, long, float, double, Boolean, Character들은
+		 * int, long, float, double, boolean, char 키워드에
+		 * 확장된 기능을 할 수 있도록 만들어진 클래스이다
+		 * 
+		 * 기본기능은 값을 저장하는 변수를 선언한다
+		 * 기본기능에 별도로 확장된 추가명령을 수행할 수 있도록
+		 * 만들어진 도구들이다
+		 */
 	}
 
 }
