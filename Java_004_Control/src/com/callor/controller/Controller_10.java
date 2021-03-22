@@ -21,8 +21,17 @@ public class Controller_10 {
 		} else {
 			System.out.println(num1 + "짝수아님");
 		}
+		
+		if (num2 % 2 == 0) {
+			System.out.println(num2 + "짝수");
+		} else {
+			System.out.println(num2 + "짝수아님");
+		}
 
 		// 등등으로 반복됨
+		
+		
+		
 		/*
 		 *반복문을 사용하여 임의 정수 100을 만들고
 		 *그 수가 짝수인지 아닌지 판별하는 코드 
