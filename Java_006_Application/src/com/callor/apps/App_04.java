@@ -1,0 +1,29 @@
+package com.callor.apps;
+
+import java.util.Random;
+
+/*
+ * 배열에 저장된 값중에
+ * 짝수가 저장된 최초의 위치는 어디인가
+ */
+public class App_04 {
+	public static void main(String[] args) {
+
+		int[] intNums = new int[20];
+		Random rnd = new Random();
+
+		for (int i = 0; i < intNums.length; i++) {
+			intNums[i] = rnd.nextInt(100) + 1;
+		}
+
+		for (int i = 0; i < intNums.length; i++) {
+			if (intNums[i] % 5 == 0) {
+				System.out.println("최초의 5의 배수 출력 위치");
+				System.out.println(" : " + i);
+				break;
+			}
+		}
+
+	}
+
+}
