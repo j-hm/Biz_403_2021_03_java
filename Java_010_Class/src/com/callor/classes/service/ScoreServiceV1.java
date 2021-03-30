@@ -6,10 +6,42 @@ import java.util.Scanner;
 
 import com.callor.classes.model.ScoreVO;
 
+/*
+ * 접근제한자(참조제한자)
+ * public, private, protected 
+ * 
+ * 클래스, 메서드, 멤버변수를 선언할 때 사용하는 키워드
+ * 접근제한자는 사용하지 않아도 문법적인 오류가 발생하지는 않음
+ * 
+ * 객체지향이론의 "정보은닉(감춘다, 제한적으로 접근하도록 한다, 데이터를 보호한다)"
+ * 
+ * public : 모두에게 개방한다. 모두에게 공개한다. 누구나 접근(읽기, 쓰기, 실행) 하게한다.
+ * 			Class obj = new Class()
+ * 			obj.method();
+ * 			obj.변수 = 100;
+ * 
+ * private : 현재 파일에 있는 코드에서만 접근가능
+ * 			obj.변수 = 100; // 문법오류가 난다
+ * 
+ * protected : 객체를 통해서는 직접 접근 금지
+ * 			Class obj = new Class()
+ * 			obj.method() 반식으로는 접근이 안된다.
+ * 			클래스를 상속받게 하겠다, 라는 전제 하에
+ * 			상속을 받은 클래스에서는 자유롭게 접근가능
+ * 			=>부모클래스와 상속받은 자식클래스에 공유할 목적
+ */
 public class ScoreServiceV1 {
 
-	Scanner scan;
-	List<ScoreVO> scoreList;
+	/*
+	 * 멤버변수를 protected로 선언해두면
+	 * 현재 클래스를 상속받은 자식클래스에서
+	 * 변수가 선언된 것처럼 동작할 수 있다.
+	 * 
+	 * 상속을 허락하고 멤버변수를 공유하고자 할 때는
+	 * protected를 추가한다.
+	 */
+	protected Scanner scan;
+	protected List<ScoreVO> scoreList;
 
 	public ScoreServiceV1() {
 		scan = new Scanner(System.in);
@@ -19,7 +51,7 @@ public class ScoreServiceV1 {
 	public Integer inputScore() {
 		// System.out.println("학번 001형식으로 입력하세요");
 		// System.out.print(">> ");
-		// String str = scan.next();
+		// String strNum = scan.next();
 
 		/*
 		 * scoreList의 데이터개수를 계산하여 입력할 학번을 자동을 생성하기
@@ -38,7 +70,7 @@ public class ScoreServiceV1 {
 			if (intKor == -1) {
 				return -1;
 			} else if (intKor < 0 || intKor > 100) {
-				System.out.println("국어점수는 100점까지!!");
+				System.out.println("국어점수는 0~100점까지!!");
 				continue;
 			}
 			break;

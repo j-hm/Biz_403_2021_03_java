@@ -20,4 +20,12 @@ public class Lines {
 		return String.format("%0"+nCount+"d", 0).replace("0", "-");
 	}
 
+
+	public static String dLine11(int nCount) {
+		//print("=" * 10) : = 문자열을 10개 만들어서 출력하라는 파이썬 명령
+		
+		//자바 11이상에서 연속된 문자열을 만드는 메서드
+		String dLine = "=".repeat(nCount);
+		return dLine;
+	}
 }
