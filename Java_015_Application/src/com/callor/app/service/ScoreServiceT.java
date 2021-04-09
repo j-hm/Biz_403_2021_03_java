@@ -1,9 +1,9 @@
  package com.callor.app.service;
 
-public interface ScoreService {
+public interface ScoreServiceT {
 	
 	public void selectMenu();
-	public String inputName(String title);
+	public void inputName();
 	public void inputScore();
 	public void printScore();
 	
