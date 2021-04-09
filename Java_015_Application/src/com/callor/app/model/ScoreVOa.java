@@ -4,7 +4,7 @@ package com.callor.app.model;
  * 성적처리를 하기 위한 VO클래스
  * 학번, 학생이름, 국어, 영어, 수학, 총점, 평균
  */
-public class ScoreVO extends Object{
+public class ScoreVOa extends Object{
 	/*
 	 * Java소스코드인 클래스 파일은
 	 * 보통 public class 클래스명 { } 형식으로 만들어진다.
@@ -27,17 +27,17 @@ public class ScoreVO extends Object{
 	 * 디버깅 용도 등으로 활용을 한다.
 	 */
 
-	private String num;
+	private Integer num;
 	private String name;
 	private Integer kor;
 	private Integer eng;
 	private Integer math;
 
-	public String getNum() {
+	public Integer getNum() {
 		return num;
 	}
 
-	public void setNum(String num) {
+	public void setNum(Integer num) {
 		this.num = num;
 	}
 
