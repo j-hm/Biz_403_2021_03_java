@@ -2,9 +2,10 @@ package com.callor.app.service.impl;
 
 import com.callor.app.model.ScoreVO;
 
-public class ScoreServiceV2 extends ScoreServiceT {
+public class ScoreServiceImplV2 extends ScoreServiceT {
 
-	private String inputNum() {
+	
+	protected String inputNum() {
 
 		Integer intNum = inService.inputValue("학번", 1);
 

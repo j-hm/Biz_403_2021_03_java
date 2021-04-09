@@ -83,7 +83,12 @@ public class ScoreServiceT implements com.callor.app.service.ScoreServiceT {
 
 	}
 
-	private String inputNum() {
+	/*
+	 * 현재 클래스 내부에서만 호출되는 메서드 프라이빗으로 선언한다
+	 * 현재 클래스를 상속받아 확장하여 사용할 수 있도록 하려면
+	 * 프라이빗을 프로텍트로 변경해주는 것이 좋다
+	 */
+	protected String inputNum() {
 
 		Integer intNum = inService.inputValue("학번", 1);
 
