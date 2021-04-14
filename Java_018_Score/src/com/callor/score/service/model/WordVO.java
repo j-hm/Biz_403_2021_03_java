@@ -24,4 +24,9 @@ public class WordVO {
 	public void setCount(Integer count) {
 		this.count = count;
 	}
+	@Override
+	public String toString() {
+		return "WordVO [english=" + english + ", korea=" + korea + ", count=" + count + "]";
+	}
+	
 }
